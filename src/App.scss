@@ -1,1 +1,12 @@
-// not empty
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  
+  &__title {
+    display: none;
+  }
+  &__container {
+    flex: 1;
+  }
+}

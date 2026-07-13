@@ -1,0 +1,21 @@
+@import './assets/styles/variables';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Mont, sans-serif;
+  font-weight: 800;
+  font-size: 12px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+}

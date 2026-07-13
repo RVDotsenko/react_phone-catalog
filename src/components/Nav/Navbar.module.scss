@@ -1,0 +1,131 @@
+.navbar {
+  &__container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+
+    border-bottom: 1px solid var(--color-surface2);
+  }
+
+  &__logo {
+    display: grid;
+    align-items: center;
+    padding: 0 24px;
+    text-transform: uppercase;
+  }
+
+  &__links {
+    display: flex;
+    column-gap: 64px;
+    align-items: center;
+    padding-left: 24px;
+  }
+
+  &__item {
+    display: flex;
+    padding: 25px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    transition: var(--transition-smooth);
+    box-shadow: inset 0 -3px 0 0 transparent;
+
+    &.active {
+      color: var(--color-white);
+      box-shadow: inset 0 -3px 0 0 var(--color-white);
+    }
+
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+
+  &__icons {
+    display: flex;
+  }
+
+  &__icon {
+    display: flex;
+    padding: 0 24px;
+    align-items: center;
+
+    color: var(--color-white);
+
+    border-left: 1px solid var(--color-surface2);
+    transition: var(--transition-smooth);
+
+    svg {
+      transition: var(--transition-smooth);
+    }
+
+    &:hover {
+      background-color: var(--color-surface2);
+      svg {
+        transform: scale(1.1);
+        color: var(--color-accent);
+      }
+    }
+
+    &.active {
+      background-color: var(--color-accent);
+      svg {
+        color: var(--color-white);
+      }
+    }
+  }
+
+  &__burger {
+    display: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  @media (max-width: 800px) {
+    .navbar {
+      &__logo {
+        padding: 0 16px;
+      }
+
+      &__logo img {
+        width: 64px;
+      }
+
+      &__links {
+        padding-left: 16px;
+        gap: 32px;
+      }
+
+      &__item {
+        padding: 16px 0;
+      }
+
+      &__icon {
+        padding: 16px;
+      }
+
+      &__burger {
+        display: none;
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .navbar {
+        &__links,
+        &__icon {
+          display: none;
+        }
+
+        &__container {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        &__burger {
+          display: flex;
+          padding: 16px;
+        }
+      }
+    }
+  }
+}
